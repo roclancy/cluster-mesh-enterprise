@@ -39,6 +39,7 @@ This phase creates cluster mesh and connects the new 2 x EKS clusters, this is a
 - Next it will restart daemon sets and deployments to take about of the new changes
 - Finally it will test Cluster Mesh status and print out details to show it has now connected the 2 new EKS Clusters
 - Next it will run a script to find the AWS security groups assigned to the clustermesh-apiserver loadbalancers
+- Using the AWS Security group for each clusters AWS loadbalancers found it will change the rules associated with the security group to allow all traffic
 <br>
 
 2 - Installation
@@ -51,12 +52,15 @@ Follow the instructions below to create all<br>
 3 - Now set the name of your cluster, AWS region and cluster ID (needed for Cluster Mesh) see step 4 below<br>
 4 - Edit file called 0-create-env.sh - change (or leave as is) to your required cluster name, cluster ID and AWS region, SAVE your changes<br>
 5 - Now run the scrip to install everything, run command "source 0-create-all.sh"<br>
-6 - The script will now run, this takes about 40 - 45 mins to install and become active (mainly due to waiting for AWS)<br>
+6 - The script will now run, this takes about 40 - 45 mins to install and become active (mainly due to waiting for AWS to build resources)<br>
+7 - Port forwarding is enabled for Hubble Timescape (lite) UI (this is output from the script at the very end, https//127.0.0.1:12000<br>
 <br>
 <br>
-below are some screen shots of the outcome of the installation
+Below are some screen shots of the outcome of the installation
 <br>
 The outcome of the Cilium Cluster Mesh status checks, showing cluster mesh is active and the 2 eks clusters are connected is shown below:
+<br>
+
 
 <br /> 
 
