@@ -66,6 +66,8 @@ Below are some screen shots of the outcome of the installation<br>
 Cilium Cluster Mesh status checks, showing that cluster mesh is active and the 2 eks clusters are connected is shown below:
 <br>
 <br>
+<img width="2084" height="1146" alt="image" src="https://github.com/user-attachments/assets/5ff47132-235d-4d3f-a2c4-d41109a8e561" />
+
 <img width="1028" height="612" alt="image" src="https://github.com/user-attachments/assets/5472eae2-cebd-4e62-b1c7-8751dbec7d40" />
 <br>
 
