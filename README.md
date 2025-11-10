@@ -55,3 +55,18 @@ Follow the instructions below to create all<br>
 
 <br /> 
 
+NOTE:<br /> 
+========================
+<br /> 
+You will see an warning and error message during the install, this is due to a number of things order of install, and waiting for pods to get created <br />
+I have put a lot of information during the installation process for you to see what is happening, all will install correct do not stop the script the messages do not interfere with the finals outcome <br />
+<br />
+Below is an example of my notes to highlight warning / error messages during the install: <br />
+<br />
+"****************************************"<br />
+"THE ABOVE ERROR MESSAGE IS BECAUSE THE NODES HAVE NOT BEEN CREATED, AND THE POD FOR THE CERT IS WAITING TO BE ASSIGNED"<br />
+"****************************************"<br />
+<br />
+<br />
+<br />
+
