@@ -42,10 +42,13 @@ This phase creates cluster mesh and connects the new 2 x EKS clusters, this is a
 - Using the AWS Security group for each clusters AWS loadbalancers found it will change the rules associated with the security group to allow all traffic
 <br>
 
-2 - Installation
+2 - Steps to Install
 =====================
 <br>
 Follow the instructions below to create all<br>
+<br>
+Make sure you have all CLI's listed here installed, kubectl, aws, eksctl and helm CLI tools should be installed <br />
+https://docs.isovalent.com/v1.17/operations-guide/installation/eks-install.html#requirements <br />
 <br>
 1 - Clone this repo<br>
 2 - Change to directory 1-eks-clusters/eks-build-2-clusters<br>
@@ -81,7 +84,7 @@ Pods Running - kubectl get pods --all-namespaces<br>
 <br>
 <br /> 
 
-NOTE: warning & error messages<br /> 
+NOTE: Warning & Error Messages<br /> 
 ========================
 <br /> 
 You will see an warning and error message during the install, this is due to a number of things order of install, and waiting for pods to get created <br />
