@@ -47,13 +47,16 @@ This phase creates cluster mesh and connects the new 2 x EKS clusters, this is a
 <br>
 Follow the instructions below to create all<br>
 <br>
-1 - Clone this repo
+1 - Clone this repo<br>
 2 - Change to directory 1-eks-clusters/eks-build-2-clusters<br>
 3 - Now set the name of your cluster, AWS region and cluster ID (needed for Cluster Mesh) see step 4 below<br>
 4 - Edit file called 0-create-env.sh - change (or leave as is) to your required cluster name, cluster ID and AWS region, SAVE your changes<br>
 5 - Now run the scrip to install everything, run command "source 0-create-all.sh"<br>
 6 - The script will now run, this takes about 40 - 45 mins to install and become active (mainly due to waiting for AWS to build resources)<br>
-7 - Port forwarding is enabled for Hubble Timescape (lite) UI (this is output from the script at the very end, https//127.0.0.1:12000<br>
+7 - Port forwarding is now enabled for Hubble Timescape (lite) UI<br>
+<br>
+Once installed you can access the UI with URL http://127.0.0.1:12000/<br>
+
 <br>
 <br>
 Below are some screen shots of the outcome of the installation<br>
