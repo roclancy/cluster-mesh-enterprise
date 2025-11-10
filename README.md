@@ -8,7 +8,7 @@ Contained within this repo is a script to build Cluster Mesh Enterpise Edition. 
 Everying listed below is automated (phase 1 & 2) using **<ins>ONE COMMAND</ins>** to install, the script will create and install all listed below: <br>
 <br>
 
-Phase 1 - Build Clusters & deploy all needed
+Phase 1 - Build 2 x EKS Clusters & deploy all needed config
 =======
 - Create your Enviroment variables<br>
 - Check you have all the requires Isovalent Helm charts and make sure they are up todate <br>
