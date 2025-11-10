@@ -11,10 +11,10 @@ Contained within this repo is a script to build Cluster Mesh Enterpise Edition. 
 <br>
 Everying listed below is automated using **<ins>ONE COMMAND</ins>** to install <br>
 <br>
-I have just listed it as two phases to explain, the script is all automated and you only need to run one command to do everything<br>
+I have listed below in two phases to just to explain, the script is all automated and you only need to run one command to do everything
 the script will create and install all listed below:<br>
 
-Phase 1 - Build 2 x EKS Clusters & deploy all needed config
+Phase 1 - Build - 2 (Two) EKS Clusters & deploy all needed config
 =======
 - Create your Enviroment variables<br>
 - Check you have all the requires Isovalent Helm charts and make sure they are up todate <br>
@@ -29,9 +29,9 @@ Phase 1 - Build 2 x EKS Clusters & deploy all needed config
 - Install recommended network policies (HTTP and DNS visiblility)
 - Install runtime security agents - Tetragon
 
-Phase 2 - Connect the 2 EKS clusters with ClusterMesh
+Phase 2 - Connect - 2 (Two) EKS clusters with ClusterMesh
 =======
-This phase creates cluster mesh and connects the new 2 x EKS clusters, this is all automated and is just for explantion for whats happening, you do not need to do anything<br>
+This phase finalises the creation of cluster mesh and connects the new 2 x EKS clusters, this is all automated and is just for explantion for whats happening, you do not need to do anything<br>
 - Now it will find the newly created clustermesh-apiserver AWS loadbalancer external DNS name for both EKS clusters <br>
 - Next it will interogate the AWS loadbalancers to obtain the public IP address for the newly created loadbalancers for each clustermesh-apiserver based on the DNS name we found above<br>
 - Now it will create the clustermesh-config.yaml file and put the AWS loadbalancer public IP addresses we found in the two steps above<br>
@@ -40,6 +40,7 @@ This phase creates cluster mesh and connects the new 2 x EKS clusters, this is a
 - Finally it will test Cluster Mesh status and print out details to show it has now connected the 2 new EKS Clusters
 - Next it will run a script to find the AWS security groups assigned to the clustermesh-apiserver loadbalancers
 - Using the AWS Security group for each clusters AWS loadbalancers found it will change the rules associated with the security group to allow all traffic
+- Port forwarding is now enabled for Hubble Timescape (lite) UI<br>
 <br>
 
 2 - Steps to Install
@@ -52,11 +53,9 @@ https://docs.isovalent.com/v1.17/operations-guide/installation/eks-install.html#
 <br>
 1 - Clone this repo<br>
 2 - Change to directory 1-eks-clusters/eks-build-2-clusters<br>
-3 - Now set the name of your cluster, AWS region and cluster ID (needed for Cluster Mesh) see step 4 below<br>
-4 - Edit file called 0-create-env.sh - change (or leave as is) to your required cluster name, cluster ID and AWS region, SAVE your changes<br>
-5 - Now run the scrip to install everything, run command "source 0-create-all.sh"<br>
-6 - The script will now run, this takes about 40 - 45 mins to install and become active (mainly due to waiting for AWS to build resources)<br>
-7 - Port forwarding is now enabled for Hubble Timescape (lite) UI<br>
+3 - Edit file called "0-create-env.sh" - change (or leave as is) to your required cluster name, cluster ID and AWS region, SAVE your changes<br>
+4 - Now run command "source 0-create-all.sh" this will create everything<br>
+5 - The script will now run, this takes about 40 - 45 mins to install and become active (mainly due to waiting for AWS to build resources)<br>
 <br>
 Once installed you can access the UI with URL http://127.0.0.1:12000/<br>
 
