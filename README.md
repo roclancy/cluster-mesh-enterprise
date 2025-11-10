@@ -52,6 +52,11 @@ Follow the instructions below to create all<br>
 4 - Edit file called 0-create-env.sh - change (or leave as is) to your required cluster name, cluster ID and AWS region, SAVE your changes<br>
 5 - Now run the scrip to install everything, run command "source 0-create-all.sh"<br>
 6 - The script will now run, this takes about 40 - 45 mins to install and become active (mainly due to waiting for AWS)<br>
+<br>
+<br>
+below are some screen shots of the outcome of the installation
+<br>
+The outcome of the Cilium Cluster Mesh status checks, showing cluster mesh is active and the 2 eks clusters are connected is shown below:
 
 <br /> 
 
