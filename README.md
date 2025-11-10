@@ -69,7 +69,7 @@ Cilium Cluster Mesh status checks, showing that cluster mesh is active and the 2
 <br>
 Hubble Timescape (lite) showing both clusters ( named cluster1 & cluster in the image)<br>
 <br>
-
+![Clustermesh - my script after](https://github.com/user-attachments/assets/492c7f09-805e-4a2e-82af-5e845ef47774)
 <br /> 
 
 NOTE:<br /> 
