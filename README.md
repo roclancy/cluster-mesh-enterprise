@@ -1,7 +1,7 @@
 MAC OS <br /> 
 <br />
 
-What this script will do <br /> 
+Installation - What this script will do <br /> 
 ================================
 Contained within this repo is a script to build Cluster Mesh Enterpise Edition. <br>
 <br>
@@ -32,6 +32,9 @@ This phase requires additional aspectsm, which are all automated this is just fo
 - Now it will move to connected the 2 new EKS Clusters, Using Helm upgrade it will enable clustermesh<br>
 - Next it will restart daemon sets and deployments to take about of the new changes
 - Finally it will test Cluster Mesh status and print out details to show it has now connected the 2 new EKS Clusters
-- 
+- Next it will run a script to find the AWS security groups assigned to the clustermesh-apiserver loadbalancers
+- Now it will run a script to change the security group rules and allow traffic on both loadblancers for both clusters
+- All is now complete
 
 <br /> 
+
