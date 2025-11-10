@@ -1,12 +1,18 @@
+**CLUSTER MESH<BR>
+ENTERPRISE EDITION - HELM INSTALL**
+----------------------------------------------------
+
 MAC OS <br /> 
 <br />
 
-Installation - What this script will do <br /> 
+What this script will do <br /> 
 ================================
 Contained within this repo is a script to build Cluster Mesh Enterpise Edition. <br>
 <br>
-Everying listed below is automated (phase 1 & 2) using **<ins>ONE COMMAND</ins>** to install, the script will create and install all listed below: <br>
+Everying listed below is automated using **<ins>ONE COMMAND</ins>** to install <br>
 <br>
+I have just listed it as two phases to explain, the script is all automated and you only need to run one command to do everything<br>
+the script will create and install all listed below:<br>
 
 Phase 1 - Build 2 x EKS Clusters & deploy all needed config
 =======
@@ -25,7 +31,7 @@ Phase 1 - Build 2 x EKS Clusters & deploy all needed config
 
 Phase 2 - Connect the 2 EKS clusters with ClusterMesh
 =======
-This phase requires additional aspectsm, which are all automated this is just for explantion, you do not need to do anything<br>
+This phase creates cluster mesh and connects the new 2 x EKS clusters, this is all automated and is just for explantion for whats happening, you do not need to do anything<br>
 - Now it will find the newly created clustermesh-apiserver AWS loadbalancer external DNS name for both EKS clusters <br>
 - Next it will interogate the AWS loadbalancers to obtain the public IP address for the newly created loadbalancers for each clustermesh-apiserver based on the DNS name we found above<br>
 - Now it will create the clustermesh-config.yaml file and put the AWS loadbalancer public IP addresses we found in the two steps above<br>
