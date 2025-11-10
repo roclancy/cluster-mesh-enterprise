@@ -2,7 +2,7 @@
 ENTERPRISE EDITION - HELM INSTALL**
 ----------------------------------------------------
 
-MAC OS <br /> 
+Tested on MAC OS <br /> 
 <br />
 
 1 - What this script will do <br /> 
@@ -72,10 +72,16 @@ Cilium Cluster Mesh status checks, showing that cluster mesh is active and the 2
 <br>
 Hubble Timescape (lite) showing both clusters ( named cluster1 & cluster in the image)<br>
 <br>
+<img width="1493" height="824" alt="image" src="https://github.com/user-attachments/assets/d9b3c3ab-75f5-44f5-bcd4-f80332530b20" />
 
+<br>
+Pods Running - kubectl get pods --all-namespaces<br>
+<br>
+<img width="739" height="453" alt="image" src="https://github.com/user-attachments/assets/1d97e7ee-2574-4754-84cd-0d4e6dcb12dc" />
+<br>
 <br /> 
 
-NOTE:<br /> 
+NOTE: warning & error messages<br /> 
 ========================
 <br /> 
 You will see an warning and error message during the install, this is due to a number of things order of install, and waiting for pods to get created <br />
