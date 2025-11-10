@@ -36,7 +36,7 @@ This phase finalises the creation of cluster mesh and connects the new 2 x EKS c
 - Next it will interogate the AWS loadbalancers to obtain the public IP address for the newly created loadbalancers for each clustermesh-apiserver based on the DNS name we found above<br>
 - Now it will create the clustermesh-config.yaml file and put the AWS loadbalancer public IP addresses we found in the two steps above<br>
 - Now it will move to connected the 2 new EKS Clusters, Using Helm upgrade it will enable clustermesh<br>
-- Next it will restart daemon sets and deployments to take about of the new changes
+- Next it will restart daemon sets and deployments to take account of the new changes
 - Finally it will test Cluster Mesh status and print out details to show it has now connected the 2 new EKS Clusters
 - Next it will run a script to find the AWS security groups assigned to the clustermesh-apiserver loadbalancers
 - Using the AWS Security group for each clusters AWS loadbalancers found it will change the rules associated with the security group to allow all traffic
