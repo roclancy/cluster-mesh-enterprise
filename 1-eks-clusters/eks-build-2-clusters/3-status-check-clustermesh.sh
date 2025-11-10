@@ -1,0 +1,36 @@
+#CHECK CLUSTER MESH STATUS
+echo " "
+echo "*************************************************"
+echo "*************************************************"
+echo "THESES STATUS CHECKS ARE FROM THE CLUSTER CONTEXT"
+echo "YOU ARE CONNECTED TO, IF YOU WANT TO SEE STATUS"
+echo "FROM BOTH ENDS CHANGE TO THE CONTEXT YOU WANT "
+echo "*************************************************"
+echo "*************************************************"
+echo " "
+
+
+echo " "
+echo "*************************************************"
+echo "*************************************************"
+echo "CHECKING CLUSTER MESH STATUS"
+echo "*************************************************"
+echo "*************************************************"
+echo " "
+cilium clustermesh status
+echo " "
+echo "*************************************************"
+echo "*************************************************"
+echo "CHECKING CLUSTER MESH STATUS - DAEMONSET CHECK"
+echo "*************************************************"
+echo "*************************************************"
+echo " "
+kubectl exec -ti ds/cilium -n kube-system -- cilium status
+echo " "
+echo "*************************************************"
+echo "*************************************************"
+echo "CHECKING CLUSTER MESH KVSTORE STATUS"
+echo "*************************************************"
+echo "*************************************************"
+echo " "
+kubectl exec -ti deploy/clustermesh-apiserver -n kube-system -c kvstoremesh -- clustermesh-apiserver kvstoremesh-dbg status 

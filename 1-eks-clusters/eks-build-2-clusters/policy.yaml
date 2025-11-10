@@ -1,0 +1,66 @@
+---
+apiVersion: cilium.io/v2
+kind: CiliumClusterwideNetworkPolicy
+metadata:
+  name: dns-visibility
+spec:
+  endpointSelector:
+    matchExpressions:
+    - key: "k8s:io.kubernetes.pod.namespace"
+      operator: "NotIn"
+      values:
+      - "kube-system"
+      - "cilium-test"
+      - "cilium-test-1"
+    - key: "k8s-app"
+      operator: "NotIn"
+      values:
+      - "kube-dns"
+  enableDefaultDeny:
+    egress: false
+    ingress: false
+  egress:
+  - toEndpoints:
+    - matchLabels:
+        k8s:io.kubernetes.pod.namespace: kube-system
+        k8s:k8s-app: kube-dns
+    toPorts:
+    - ports:
+      - port: "53"
+        protocol: UDP
+      - port: "53"
+        protocol: TCP
+      rules:
+        dns:
+        - matchPattern: '*'
+---
+apiVersion: cilium.io/v2
+kind: CiliumClusterwideNetworkPolicy
+metadata:
+  name: http-visibility
+spec:
+  endpointSelector:
+    matchExpressions:
+    - key: "k8s:io.kubernetes.pod.namespace"
+      operator: "NotIn"
+      values:
+      - "kube-system"
+      - "cilium-test"
+      - "cilium-test-1"
+    - key: "k8s-app"
+      operator: "NotIn"
+      values:
+      - "kube-dns"
+  enableDefaultDeny:
+    egress: false
+    ingress: false
+  ingress:
+  - toPorts:
+    - ports:
+      - port: "80"
+        protocol: "TCP"
+      - port: "8080"
+        protocol: "TCP"
+      rules:
+        http:
+        - {}

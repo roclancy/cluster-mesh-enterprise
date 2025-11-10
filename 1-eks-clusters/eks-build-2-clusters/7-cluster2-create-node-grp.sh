@@ -1,0 +1,1 @@
+eksctl create nodegroup -f nodegroup-cluster2.yaml
