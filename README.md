@@ -86,8 +86,8 @@ Pods Running - kubectl get pods --all-namespaces<br>
 NOTE: Warning & Error Messages<br /> 
 ========================
 <br /> 
-You will see an warning and error message during the install, this is due to a number of things order of install, and waiting for pods to get created <br />
-I have put a lot of information during the installation process for you to see what is happening, all will install correct do not stop the script the messages do not interfere with the finals outcome <br />
+You will see a number of warning and error message during the install this is due to a number of things like order of install, and waiting for pods to get created <br />
+I have put a lot of information during the installation script for you to see what is happening, all will install correct do not stop the script the messages do not interfere with the final outcome <br />
 <br />
 Below is an example of notes I have added to the install script to highlight warning / error messages during the install: <br />
 <br />
