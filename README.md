@@ -56,11 +56,16 @@ Follow the instructions below to create all<br>
 7 - Port forwarding is enabled for Hubble Timescape (lite) UI (this is output from the script at the very end, https//127.0.0.1:12000<br>
 <br>
 <br>
-Below are some screen shots of the outcome of the installation
+Below are some screen shots of the outcome of the installation<br>
+--------------------------------------------------------------
+
 <br>
-The outcome of the Cilium Cluster Mesh status checks, showing cluster mesh is active and the 2 eks clusters are connected is shown below:
+Cilium Cluster Mesh status checks, showing that cluster mesh is active and the 2 eks clusters are connected is shown below:
 <br>
 
+<br>
+Hubble Timescape (lite) showing both clusters ( named cluster1 & cluster in the image)<br>
+<br>
 
 <br /> 
 
