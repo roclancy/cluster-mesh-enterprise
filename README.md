@@ -57,7 +57,7 @@ https://docs.isovalent.com/v1.17/operations-guide/installation/eks-install.html#
 4 - Now run command "source 0-create-all.sh" this will create everything<br>
 5 - The script will now run, this takes about 40 - 45 mins to install and become active (mainly due to waiting for AWS to build resources)<br>
 <br>
-Once installed you can access the UI with URL http://127.0.0.1:12000/<br>
+Once installed you can access the Hubble Timescape (lite) UI with URL http://127.0.0.1:12000/<br>
 
 <br>
 <br>
