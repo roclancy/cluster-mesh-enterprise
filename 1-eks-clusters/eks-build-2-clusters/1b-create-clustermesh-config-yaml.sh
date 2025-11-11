@@ -20,6 +20,6 @@ clustermesh:
       port: 2379
     - name: cluster2
       ips:
-      - ${ELB_IP_CLUSTER1}
+      - ${ELB_IP_CLUSTER2}
       port: 2379
 EOF
